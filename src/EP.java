@@ -5,10 +5,7 @@
  */
 public class EP implements ExamPile{
 
-    /**
-     * @param args the command line arguments
-     */
-    
+   
     /**
      * Initializes the pile of exams to consist of
      * the contents of the list provided (the elements of the list represent the exams
@@ -49,6 +46,10 @@ public class EP implements ExamPile{
     
     
     
+    /**
+     * 
+     * @param args the command line argument.
+     */
     
     public static void main(String[] args) {
         // TODO code application logic here
