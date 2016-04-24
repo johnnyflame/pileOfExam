@@ -1,18 +1,30 @@
+import java.util.*;
+
 
 /**
  *
  * @author Johnny Flame Lee and Frida Israelsson
  */
 public class EP implements ExamPile{
-
-   
+    
+    private static final int SIZE = 10;
+    List<Integer> pile;
+    int count;
+    
+    
     /**
-     * Initializes the pile of exams to consist of
-     * the contents of the list provided (the elements of the list represent the exams
+     * Initializes the pile of exams to consist of the contents of the list
+     * provided (the elements of the list represent the exams
      * in order from top to bottom of the pile).
      * @param items
      */
-    public void load (List<Integer> items){
+    public void load (List<Integer> items){ //calling a list of type intergers named items.
+       
+        List<Integer> pile = new ArrayList<integer>();
+        
+        for (int s: items){
+        pile.add(s);
+        }
         
     }
     
@@ -22,6 +34,10 @@ public class EP implements ExamPile{
      */
     public int peek(){
         
+    }
+    
+    public int size(){
+     return count; 
     }
     /**
      * Returns the given value from the top
@@ -51,8 +67,9 @@ public class EP implements ExamPile{
      * @param args the command line argument.
      */
     
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(int[] args) {
+        
+        load(args);
     }
     
 }
