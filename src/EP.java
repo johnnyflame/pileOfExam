@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Scanner;
 
 
 /**
@@ -6,11 +7,17 @@ import java.util.*;
  * @author Johnny Flame Lee and Frida Israelsson
  */
 public class EP implements ExamPile{
+   
+    private int count;
+    private List<Integer> pile;
     
-    private static final int SIZE = 10;
-    List<Integer> pile;
-    int count;
     
+    /**
+     * Constructor creating a new instance of EP
+     */
+    public EP(){
+       pile = new Stack();
+    }
     
     /**
      * Initializes the pile of exams to consist of the contents of the list
@@ -20,8 +27,6 @@ public class EP implements ExamPile{
      */
     public void load (List<Integer> items){ //calling a list of type intergers named items.
        
-        List<Integer> pile = new ArrayList<integer>();
-        
         for (int s: items){
         pile.add(s);
         }
@@ -33,7 +38,7 @@ public class EP implements ExamPile{
      * @return s the value at the top of the pile
      */
     public int peek(){
-        
+        return 0;
     }
     
     public int size(){
@@ -48,7 +53,7 @@ public class EP implements ExamPile{
      * @return 
      */
     public int mark(int depth, int value){
-        
+        return 0;
     }
     
     /**
@@ -67,9 +72,19 @@ public class EP implements ExamPile{
      * @param args the command line argument.
      */
     
-    public static void main(int[] args) {
+    public static void main(String [] args) {
         
-        load(args);
+    /* what if we load the input from main args into an array/arrayList first before passing it to Load? */
+    EP newExamPile = new EP();
+    Scanner sc = new Scanner(System.in);
+    List<Integer>input = new ArrayList();
+    
+    while (sc.hasNext()){
+        input.add(sc.nextInt());
+    }
+    
+    
+    newExamPile.load(input);
     }
     
 }
