@@ -1,19 +1,35 @@
-
+import java.util.*;
 /**
  *
  * @author Johnny Flame Lee and Frida Israelsson
  */
 public class EP implements ExamPile{
+     private List<Integer> exams;
+     
+     public EP(){
+         //pile = new Stack();
+    }
 
-   
     /**
      * Initializes the pile of exams to consist of
      * the contents of the list provided (the elements of the list represent the exams
      * in order from top to bottom of the pile).
      * @param items
      */
-    public void load (List<Integer> items){
-        
+    public void load(List<Integer> items){
+        exams = items;
+        System.out.println(exams);
+    }
+    
+    /** ...
+     * 
+     */
+    public int size(){
+        int pileSize = 0;
+        for(int i:exams){
+            pileSize++;
+        }
+        return pileSize;
     }
     
     /**
@@ -21,7 +37,8 @@ public class EP implements ExamPile{
      * @return s the value at the top of the pile
      */
     public int peek(){
-        
+        //int top = 
+        return 0;
     }
     /**
      * Returns the given value from the top
@@ -32,7 +49,12 @@ public class EP implements ExamPile{
      * @return 
      */
     public int mark(int depth, int value){
-        
+        for (int i=0; i<depth; i++){
+            //exams.pop();
+            
+        }
+            
+        return 0;
     }
     
     /**
@@ -44,7 +66,15 @@ public class EP implements ExamPile{
         
     }
     
-    
+//    public String sortingSteps(){
+//        String steps = "";
+//        int s = 0;
+//        if (exams.peek()==s){
+//            exams.mark(1,s);
+//        }
+//        
+//        return steps;
+//    }
     
     /**
      * 
@@ -52,7 +82,18 @@ public class EP implements ExamPile{
      */
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        EP pile = new EP(); 
+        Stack<Integer> items = new Stack<Integer>();
+        
+        for(String s: args){
+            items.add(Integer.parseInt(s));
+        
+        }
+        pile.load(items);
+        
+        //System.out.println(pile.peek());
+
+        
     }
     
 }
