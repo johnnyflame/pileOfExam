@@ -1,23 +1,17 @@
 import java.util.*;
-import java.util.Scanner;
-
-
 /**
  *
  * @author Johnny Flame Lee and Frida Israelsson
  */
 public class EP implements ExamPile{
-   
+
+    private List<Integer> pile = new LinkedList<>();
+    private int pileSize;
     private int count;
-    private List<Integer> pile;
-    
     
     /**
      * Constructor creating a new instance of EP
      */
-    public EP(){
-       pile = new Stack();
-    }
     
     /**
      * Initializes the pile of exams to consist of the contents of the list
@@ -25,12 +19,8 @@ public class EP implements ExamPile{
      * in order from top to bottom of the pile).
      * @param items
      */
-    public void load (List<Integer> items){ //calling a list of type intergers named items.
-       
-        for (int s: items){
-        pile.add(s);
-        }
-        
+    public void load (List<Integer> items){ //calling a list of type intergers named items
+        pile.addAll(items);
     }
     
     /**
@@ -42,7 +32,7 @@ public class EP implements ExamPile{
     }
     
     public int size(){
-     return count; 
+     return 0; 
     }
     /**
      * Returns the given value from the top
@@ -65,8 +55,6 @@ public class EP implements ExamPile{
         
     }
     
-    
-    
     /**
      * 
      * @param args the command line argument.
@@ -74,17 +62,20 @@ public class EP implements ExamPile{
     
     public static void main(String [] args) {
         
-    /* what if we load the input from main args into an array/arrayList first before passing it to Load? */
-    EP newExamPile = new EP();
-    Scanner sc = new Scanner(System.in);
-    List<Integer>input = new ArrayList();
-    
-    while (sc.hasNext()){
+        /* what if we load the input from main args into an array/arrayList first before passing it to Load? */
+        List<Integer>input = new ArrayList<>();
+        
+        EP newPile = new EP(); //creates a new exampile
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter some numbers");
+        
+     
         input.add(sc.nextInt());
+        
+        System.out.println(input);
+        
     }
-    
-    
-    newExamPile.load(input);
-    }
-    
 }
+
