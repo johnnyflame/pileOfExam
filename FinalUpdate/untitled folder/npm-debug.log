@@ -1,0 +1,179 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'typescript' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'typescript', null ]
+7 verbose cache add spec typescript
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'typescript',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'typescript',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed typescript@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for typescript
+11 info addNameTag [ 'typescript', 'latest' ]
+12 silly mapToRegistry name typescript
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'typescript',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'typescript',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/typescript
+17 verbose addNameTag registry:https://registry.npmjs.org/typescript not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/typescript
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 11:17:30 AM
+21 verbose request id dd610caf245e15f2
+22 verbose etag "DRH000X8SDXDPS0XBDQ0WKLUV"
+23 http request GET https://registry.npmjs.org/typescript
+24 http 304 https://registry.npmjs.org/typescript
+25 verbose headers { date: 'Tue, 03 May 2016 23:17:30 GMT',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   'cache-control': 'max-age=300',
+25 verbose headers   etag: '"DRH000X8SDXDPS0XBDQ0WKLUV"',
+25 verbose headers   age: '59',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-served-by': 'cache-wlg7321-WLG',
+25 verbose headers   'x-cache': 'HIT',
+25 verbose headers   'x-cache-hits': '1',
+25 verbose headers   'x-timer': 'S1462317450.790396,VS0,VE0',
+25 verbose headers   vary: 'Accept-Encoding' }
+26 silly get cb [ 304,
+26 silly get   { date: 'Tue, 03 May 2016 23:17:30 GMT',
+26 silly get     via: '1.1 varnish',
+26 silly get     'cache-control': 'max-age=300',
+26 silly get     etag: '"DRH000X8SDXDPS0XBDQ0WKLUV"',
+26 silly get     age: '59',
+26 silly get     connection: 'keep-alive',
+26 silly get     'x-served-by': 'cache-wlg7321-WLG',
+26 silly get     'x-cache': 'HIT',
+26 silly get     'x-cache-hits': '1',
+26 silly get     'x-timer': 'S1462317450.790396,VS0,VE0',
+26 silly get     vary: 'Accept-Encoding' } ]
+27 verbose etag https://registry.npmjs.org/typescript from cache
+28 verbose get saving typescript to /Users/theFlame/.npm/registry.npmjs.org/typescript/.cache.json
+29 verbose correctMkdir /Users/theFlame/.npm correctMkdir not in flight; initializing
+30 silly addNameTag next cb for typescript with tag latest
+31 silly addNamed typescript@1.8.10
+32 verbose addNamed "1.8.10" is a plain semver version for typescript
+33 silly cache afterAdd typescript@1.8.10
+34 verbose afterAdd /Users/theFlame/.npm/typescript/1.8.10/package/package.json not in flight; writing
+35 verbose correctMkdir /Users/theFlame/.npm correctMkdir not in flight; initializing
+36 verbose afterAdd /Users/theFlame/.npm/typescript/1.8.10/package/package.json written
+37 silly install resolved [ { name: 'typescript',
+37 silly install resolved     author: { name: 'Microsoft Corp.' },
+37 silly install resolved     homepage: 'http://typescriptlang.org/',
+37 silly install resolved     version: '1.8.10',
+37 silly install resolved     license: 'Apache-2.0',
+37 silly install resolved     description: 'TypeScript is a language for application scale JavaScript development',
+37 silly install resolved     keywords: [ 'TypeScript', 'Microsoft', 'compiler', 'language', 'javascript' ],
+37 silly install resolved     bugs: { url: 'https://github.com/Microsoft/TypeScript/issues' },
+37 silly install resolved     repository:
+37 silly install resolved      { type: 'git',
+37 silly install resolved        url: 'git+https://github.com/Microsoft/TypeScript.git' },
+37 silly install resolved     main: './lib/typescript.js',
+37 silly install resolved     typings: './lib/typescript.d.ts',
+37 silly install resolved     bin: { tsc: './bin/tsc', tsserver: './bin/tsserver' },
+37 silly install resolved     engines: { node: '>=0.8.0' },
+37 silly install resolved     devDependencies:
+37 silly install resolved      { jake: 'latest',
+37 silly install resolved        mocha: '2.3.4',
+37 silly install resolved        chai: 'latest',
+37 silly install resolved        browserify: 'latest',
+37 silly install resolved        istanbul: 'latest',
+37 silly install resolved        'mocha-fivemat-progress-reporter': 'latest',
+37 silly install resolved        tslint: 'next',
+37 silly install resolved        typescript: 'next',
+37 silly install resolved        tsd: 'latest' },
+37 silly install resolved     scripts:
+37 silly install resolved      { pretest: 'jake tests',
+37 silly install resolved        test: 'jake runtests',
+37 silly install resolved        build: 'npm run build:compiler && npm run build:tests',
+37 silly install resolved        'build:compiler': 'jake local',
+37 silly install resolved        'build:tests': 'jake tests',
+37 silly install resolved        clean: 'jake clean',
+37 silly install resolved        jake: 'jake',
+37 silly install resolved        lint: 'jake lint',
+37 silly install resolved        'setup-hooks': 'node scripts/link-hooks.js' },
+37 silly install resolved     browser: { buffer: false, fs: false, os: false, path: false },
+37 silly install resolved     gitHead: '794c57478ec2a44ee15fb3e245a4c5d2d1612375',
+37 silly install resolved     _id: 'typescript@1.8.10',
+37 silly install resolved     _shasum: 'b475d6e0dff0bf50f296e5ca6ef9fbb5c7320f1e',
+37 silly install resolved     _from: 'typescript@latest',
+37 silly install resolved     _npmVersion: '2.14.2',
+37 silly install resolved     _nodeVersion: '5.9.0',
+37 silly install resolved     _npmUser: { name: 'typescript', email: 'typescript@microsoft.com' },
+37 silly install resolved     maintainers: [ [Object] ],
+37 silly install resolved     dist:
+37 silly install resolved      { shasum: 'b475d6e0dff0bf50f296e5ca6ef9fbb5c7320f1e',
+37 silly install resolved        tarball: 'https://registry.npmjs.org/typescript/-/typescript-1.8.10.tgz' },
+37 silly install resolved     _npmOperationalInternal:
+37 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+37 silly install resolved        tmp: 'tmp/typescript-1.8.10.tgz_1460493736776_0.9304528103675693' },
+37 silly install resolved     directories: {},
+37 silly install resolved     _resolved: 'https://registry.npmjs.org/typescript/-/typescript-1.8.10.tgz',
+37 silly install resolved     readme: 'ERROR: No README data found!' } ]
+38 info install typescript@1.8.10 into /usr/local/lib
+39 info installOne typescript@1.8.10
+40 verbose installOne of typescript to /usr/local/lib not in flight; installing
+41 verbose correctMkdir /Users/theFlame/.npm/_locks correctMkdir not in flight; initializing
+42 verbose lock using /Users/theFlame/.npm/_locks/typescript-5355178f5d1a073f.lock for /usr/local/lib/node_modules/typescript
+43 silly install write writing typescript 1.8.10 to /usr/local/lib/node_modules/typescript
+44 verbose unbuild lib/node_modules/typescript
+45 silly gentlyRm /usr/local/lib/node_modules/typescript is being purged from base /usr/local
+46 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/typescript
+47 verbose tar unpack /Users/theFlame/.npm/typescript/1.8.10/package.tgz
+48 verbose tar unpacking to /usr/local/lib/node_modules/typescript
+49 silly gentlyRm /usr/local/lib/node_modules/typescript is being purged
+50 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/typescript
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 error tar.unpack untar error /Users/theFlame/.npm/typescript/1.8.10/package.tgz
+53 verbose unlock done using /Users/theFlame/.npm/_locks/typescript-5355178f5d1a073f.lock for /usr/local/lib/node_modules/typescript
+54 verbose fstream_path /usr/local/lib/node_modules/typescript
+55 verbose fstream_type Directory
+56 verbose fstream_class DirWriter
+57 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/typescript'
+57 verbose stack     at Error (native)
+58 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+58 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+58 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+59 verbose cwd /Users/theFlame/Desktop/Uni 2016/COSC 241/untitled folder
+60 error Darwin 15.4.0
+61 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "typescript"
+62 error node v4.4.3
+63 error npm  v2.15.1
+64 error path /usr/local/lib/node_modules/typescript
+65 error code EACCES
+66 error errno -13
+67 error syscall mkdir
+68 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/typescript'
+68 error     at Error (native)
+68 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/typescript']
+68 error   errno: -13,
+68 error   code: 'EACCES',
+68 error   syscall: 'mkdir',
+68 error   path: '/usr/local/lib/node_modules/typescript',
+68 error   fstream_type: 'Directory',
+68 error   fstream_path: '/usr/local/lib/node_modules/typescript',
+68 error   fstream_class: 'DirWriter',
+68 error   fstream_stack:
+68 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+68 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+68 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+69 error Please try running this command again as root/Administrator.
+70 verbose exit [ -13, true ]
+71 verbose unbuild lib/node_modules/typescript
+72 silly gentlyRm /usr/local/lib/node_modules/typescript is being purged from base /usr/local
+73 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/typescript
